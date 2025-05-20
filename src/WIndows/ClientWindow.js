@@ -1,10 +1,11 @@
 import React from "react";
+import Nav from "../Components/Nav/Nav";
 
 const ClientWindow = () => {
   return (
-    <div>
-      <h1>Client</h1>
-    </div>
+    <>
+      <Nav title={"Client"} />
+    </>
   );
 };
 
