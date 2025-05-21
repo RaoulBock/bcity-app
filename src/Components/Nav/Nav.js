@@ -14,8 +14,12 @@ const Nav = ({ title }) => {
       id: 0,
     },
     {
-      name: "Contact",
+      name: "Create Client",
       id: 1,
+    },
+    {
+      name: "Contact",
+      id: 2,
     },
   ];
   return (

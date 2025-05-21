@@ -5,7 +5,7 @@
   font-family: "Roboto", sans-serif;
 }
 body {
-  margin: 0px 200px;
+  margin: 0px 300px;
   border-left: 1px solid #e1e1e1;
   height: 100vh;
 }
@@ -51,6 +51,7 @@ button.nav-active-tab {
   font-weight: 600;
   color: blue;
   cursor: pointer;
+  border-bottom: 1px solid blue;
 }
 button.nav-not-active-tab {
   border: 0;
@@ -66,8 +67,6 @@ button.nav-not-active-tab {
   overflow-x: auto;
   background-color: #fff;
   color: #000;
-  border-radius: 8px;
-  border: 1px solid #eee;
 }
 .custom-table {
   width: 100%;
@@ -126,4 +125,39 @@ tr:hover {
 }
 .center-design-container {
   margin: 12px 102px;
+}
+.custom-table-wrapper {
+  max-height: 400px; /* fixed height */
+  overflow-y: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border-bottom: 1px solid #eee;
+  padding: 10px 15px;
+  text-align: left;
+  color: #222;
+}
+
+.custom-table thead {
+  background-color: #f9f9f9;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}
+
+.loading-text {
+  padding: 10px;
+  text-align: center;
+  font-style: italic;
+  color: #666;
 }
