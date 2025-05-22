@@ -114,14 +114,6 @@ const ClientWindow = () => {
     <>
       <Nav title={"Binary City"} />
       <div className="center-design-container">
-        <div className="input-with-icon" style={{ marginBottom: 12 }}>
-          <small className="input-icon-text">{APP_ICONS.SEARCH}</small>
-          <input
-            type={"search"}
-            placeholder="Search Clients ..."
-            className="search-input"
-          />
-        </div>
         <Table headers={headers} data={data} />
       </div>
     </>

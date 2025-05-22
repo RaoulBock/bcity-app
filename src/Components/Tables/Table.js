@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { APP_ICONS } from "../../Context/Settings";
 
-const Table = ({ headers = [], data = [], pageSize = 20 }) => {
+const Table = ({ headers = [], data = [], pageSize = 8, onChangeSearch }) => {
   const [visibleCount, setVisibleCount] = useState(
     Math.min(pageSize, data.length)
   );
@@ -48,6 +48,7 @@ const Table = ({ headers = [], data = [], pageSize = 20 }) => {
           type={"search"}
           placeholder="Search Clients, name or code no ..."
           className="search-input"
+          onChange={onChangeSearch}
         />
       </div>
       <table
