@@ -2,9 +2,11 @@ import React from "react";
 import { APP_ICONS } from "../../Context/Settings";
 import MainTab from "../Tabs/MainTab";
 import { useNavigate, useNavigation } from "react-router-dom";
+import { AppContext } from "../../Context/AppProvider";
 
 const Nav = ({ title }) => {
-  const [mainTabs, setMainTabs] = React.useState(0);
+  const { menuTabs, setMenuTabs } = React.useContext(AppContext);
+  //const [mainTabs, setMainTabs] = React.useState(0);
 
   const nav = useNavigate();
 
@@ -12,14 +14,17 @@ const Nav = ({ title }) => {
     {
       name: "Client",
       id: 0,
+      onClick: () => setMenuTabs(0),
     },
     {
       name: "Create Client",
       id: 1,
+      onClick: () => setMenuTabs(1),
     },
     {
       name: "Contact",
       id: 2,
+      onClick: () => setMenuTabs(2),
     },
   ];
   return (
@@ -45,7 +50,7 @@ const Nav = ({ title }) => {
               key={i}
               onClick={e.onClick}
               className={
-                e.id === mainTabs ? "nav-active-tab" : "nav-not-active-tab"
+                e.id === menuTabs ? "nav-active-tab" : "nav-not-active-tab"
               }
             />
           );

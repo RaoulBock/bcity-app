@@ -4,8 +4,10 @@ import MainTab from "../Components/Tabs/MainTab";
 import Table from "../Components/Tables/Table";
 import Button from "../Components/Button/Button";
 import { APP_ICONS } from "../Context/Settings";
+import { AppContext } from "../Context/AppProvider";
 
 const ClientWindow = () => {
+  const { menuTabs } = React.useContext(AppContext);
   const headers = ["Name", "Client_code", "No"];
   const data = [
     {
@@ -110,12 +112,16 @@ const ClientWindow = () => {
     },
   ];
 
+  console.log(menuTabs)
+
   return (
     <>
       <Nav title={"Binary City"} />
-      <div className="center-design-container">
-        <Table headers={headers} data={data} />
-      </div>
+      {menuTabs === 0 && (
+        <div className="center-design-container">
+          <Table headers={headers} data={data} />
+        </div>
+      )}
     </>
   );
 };
